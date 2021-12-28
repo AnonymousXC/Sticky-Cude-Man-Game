@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/we_ak47s_lb_04_hpx-[AudioTrimmer.com].mp3-548f1f5196532a245ad526aa95a3b1a6.mp3str"
+
+[deps]
+
+source_file="res://Asset/Music/we_ak47s_lb_04_hpx-[AudioTrimmer.com].mp3"
+dest_files=[ "res://.import/we_ak47s_lb_04_hpx-[AudioTrimmer.com].mp3-548f1f5196532a245ad526aa95a3b1a6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

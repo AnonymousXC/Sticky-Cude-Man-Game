@@ -1,0 +1,259 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Asset/Style_Box/Start.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scripts/Start Controls.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Shapes/bronze_coin.png" type="Texture" id=3]
+[ext_resource path="res://Scripts/Character_Type_File.gd" type="Script" id=4]
+[ext_resource path="res://Asset/Text/Pacifico/Pacifico-Regular.ttf" type="DynamicFontData" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 20
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=5]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=6]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0, 1, 0.976471, 0 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 5 )
+
+[node name="CanvasLayer2" type="CanvasLayer"]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.54902, 0.584314, 0.94902, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -118.0
+margin_top = 100.0
+margin_right = 118.0
+margin_bottom = 164.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -118.0
+margin_top = 300.0
+margin_right = 118.0
+margin_bottom = 364.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+text = "Credits"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -118.0
+margin_top = 200.0
+margin_right = 118.0
+margin_bottom = 264.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -118.0
+margin_top = 400.0
+margin_right = 118.0
+margin_bottom = 464.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 4 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control"]
+margin_left = 158.238
+margin_top = 24.6918
+margin_right = 198.238
+margin_bottom = 53.6918
+rect_scale = Vector2( 2.3137, 2.36292 )
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "522"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/Label"]
+show_behind_parent = true
+margin_left = -1.83163
+margin_top = 7.9674
+margin_right = 38.1684
+margin_bottom = 23.9674
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Total Kills" type="Label" parent="Control"]
+margin_left = 759.0
+margin_top = 26.6324
+margin_right = 891.0
+margin_bottom = 55.6324
+rect_scale = Vector2( 2, 2.24 )
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "58254"
+
+[node name="ColorRect" type="ColorRect" parent="Control/Total Kills"]
+show_behind_parent = true
+margin_left = -5.0
+margin_top = 4.56759
+margin_right = 128.0
+margin_bottom = 24.5676
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Enemy_Color" type="CheckBox" parent="Control"]
+margin_left = 31.009
+margin_top = 506.629
+margin_right = 195.009
+margin_bottom = 530.629
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Enemy Random Color"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 65.0538, 65.0538 )
+texture = ExtResource( 3 )
+
+[node name="Character_Type_File" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="TextEdit" type="TextEdit" parent="."]
+margin_left = 650.0
+margin_top = 120.0
+margin_right = 1073.0
+margin_bottom = 593.0
+custom_styles/read_only = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "Use W or Up key to Jump.
+Use Mouse to aim.
+Use Left Mouse Button to Shoot.
+Use Shift Key to get slow motion.
+Use 1,2,3 Key to switch to Gun , 
+Grappling Hook and Granade respectively.
+Or click on Icons.
+Use Space Bar to hide cursor and
+ E Key to make it visible
+Thanks to play my game. 
+You are playing so, all items are free for you."
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit2" type="TextEdit" parent="."]
+margin_left = 5.50507
+margin_top = 118.502
+margin_right = 563.505
+margin_bottom = 383.502
+custom_styles/read_only = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "The coins after restart remain same as 
+last to twice yourcoins , its not a bug.
+You get coins on kills also and 
+you also get bonus.  If , Any bugs tell to me 
+at this  game's repository.
+Share this game for more such games."
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Button" to="Control" method="_on_Button_pressed"]
+[connection signal="pressed" from="Control/Button4" to="Control" method="_on_Button4_pressed"]
+[connection signal="pressed" from="Control/Button2" to="Control" method="_on_Button2_pressed"]
+[connection signal="pressed" from="Control/Button3" to="Control" method="_on_Button3_pressed"]
+[connection signal="pressed" from="Control/Enemy_Color" to="Control" method="_on_Enemy_Color_pressed"]

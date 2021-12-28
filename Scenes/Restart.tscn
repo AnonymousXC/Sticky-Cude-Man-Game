@@ -1,0 +1,94 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Asset/Style_Box/Style_Box.tres" type="StyleBox" id=1]
+[ext_resource path="res://Scripts/Restart.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Text/Pacifico/Pacifico-Regular.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="Reset" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Reset"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.960784, 0.968627, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Restart" type="Button" parent="Reset"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.5
+margin_top = 150.0
+margin_right = 140.5
+margin_bottom = 200.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Restart"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Shop" type="Button" parent="Reset"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.5
+margin_top = 250.0
+margin_right = 140.5
+margin_bottom = 300.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 2 )
+disabled = true
+text = "Shop"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit" type="Button" parent="Reset"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.5
+margin_top = 350.0
+margin_right = 140.5
+margin_bottom = 400.0
+custom_styles/hover = ExtResource( 1 )
+custom_styles/pressed = ExtResource( 1 )
+custom_styles/normal = ExtResource( 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Exit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Reset/Restart" to="Reset" method="_on_Restart_pressed"]
+[connection signal="pressed" from="Reset/Shop" to="Reset" method="_on_Shop_pressed"]
+[connection signal="pressed" from="Reset/Exit" to="Reset" method="_on_Exit_pressed"]

@@ -1,0 +1,234 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Asset/Shapes/Triangle.png" type="Texture" id=1]
+[ext_resource path="res://Asset/Shapes/New Project.png" type="Texture" id=2]
+[ext_resource path="res://Asset/Weapons/PNG/assaultrifle2.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Weapons/PNG/smg.png" type="Texture" id=4]
+[ext_resource path="res://Scripts/Shop_Controls.gd" type="Script" id=5]
+[ext_resource path="res://Asset/UI/buttonX.png" type="Texture" id=6]
+[ext_resource path="res://Asset/Text/Pacifico/Pacifico-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.6, 0.6, 0.6, 0.54902 )
+
+[sub_resource type="DynamicFont" id=9]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=10]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=11]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=12]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 7 )
+
+[node name="Shop" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 1, 0.415686, 0.752941 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Triangle" type="CheckBox" parent="Control"]
+margin_left = 75.73
+margin_top = 113.725
+margin_right = 265.73
+margin_bottom = 246.725
+icon = ExtResource( 1 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Circle" type="CheckBox" parent="Control"]
+margin_left = 742.231
+margin_top = 92.8681
+margin_right = 921.231
+margin_bottom = 273.867
+icon = ExtResource( 2 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SmgGun" type="CheckBox" parent="Control"]
+margin_left = 36.2825
+margin_top = 372.758
+margin_right = 286.283
+margin_bottom = 535.758
+icon = ExtResource( 4 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="Control/SmgGun"]
+margin_left = 5.86481
+margin_top = 158.865
+margin_right = 115.865
+margin_bottom = 192.865
+rect_scale = Vector2( 1.92, 2.12 )
+custom_styles/read_only = SubResource( 2 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "Price : Free"
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AssualtRifle" type="CheckBox" parent="Control"]
+margin_left = 716.366
+margin_top = 383.983
+margin_right = 1021.37
+margin_bottom = 553.983
+icon = ExtResource( 3 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit4" type="TextEdit" parent="Control/AssualtRifle"]
+margin_left = 48.0
+margin_top = 148.0
+margin_right = 171.0
+margin_bottom = 181.0
+rect_scale = Vector2( 1.92, 2.12 )
+custom_styles/read_only = SubResource( 4 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "Price : Free"
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Exit_Button" type="Button" parent="Control"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -97.0
+margin_bottom = 88.0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorPicker" type="ColorPicker" parent="Control"]
+margin_left = 344.0
+margin_top = 151.368
+margin_right = 652.0
+margin_bottom = 587.368
+color = Color( 1, 0, 0, 1 )
+edit_alpha = false
+presets_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit" type="TextEdit" parent="Control"]
+margin_left = 76.0
+margin_top = 265.0
+margin_right = 172.0
+margin_bottom = 302.0
+rect_scale = Vector2( 1.92, 2.12 )
+custom_styles/read_only = SubResource( 5 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "Price : Free"
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit2" type="TextEdit" parent="Control"]
+margin_left = 769.0
+margin_top = 275.0
+margin_right = 867.0
+margin_bottom = 311.0
+rect_scale = Vector2( 1.92, 2.12 )
+custom_styles/read_only = SubResource( 6 )
+custom_styles/normal = SubResource( 3 )
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color_readonly = Color( 0, 0, 0, 1 )
+text = "Price : Free"
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit3" type="TextEdit" parent="."]
+margin_right = 431.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+text = "These Guns and Character are free but you 
+have to choose them again when you restart the game if, closed. "
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextEdit4" type="TextEdit" parent="."]
+margin_left = 381.0
+margin_top = 87.0
+margin_right = 634.0
+margin_bottom = 122.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color_readonly = Color( 1, 1, 1, 1 )
+text = "Choose a color for your character."
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Triangle" to="Control" method="_on_Triangle_pressed"]
+[connection signal="pressed" from="Control/Circle" to="Control" method="_on_Circle_pressed"]
+[connection signal="pressed" from="Control/SmgGun" to="Control" method="_on_SmgGun_pressed"]
+[connection signal="pressed" from="Control/AssualtRifle" to="Control" method="_on_AssualtRifle_pressed"]
+[connection signal="pressed" from="Control/Exit_Button" to="Control" method="_on_Exit_Button_pressed"]

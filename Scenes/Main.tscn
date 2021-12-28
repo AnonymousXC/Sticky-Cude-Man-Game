@@ -1,0 +1,71 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Character.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/Main.gd" type="Script" id=3]
+[ext_resource path="res://Scenes/Mouse_Position.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/Control.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scripts/Spawn.gd" type="Script" id=6]
+[ext_resource path="res://Scenes/Restart.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Asset/Envirnoment/Main.tres" type="Environment" id=8]
+[ext_resource path="res://Scripts/Coin.gd" type="Script" id=9]
+
+[node name="Base" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Basis2" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Floor" parent="Basis2" instance=ExtResource( 1 )]
+modulate = Color( 0, 1, 0.976471, 1 )
+position = Vector2( 645.636, 1381.99 )
+scale = Vector2( 26, 18.6032 )
+collision_layer = 47
+collision_mask = 47
+
+[node name="Floor2" parent="Basis2" instance=ExtResource( 1 )]
+modulate = Color( 0, 1, 0.976471, 1 )
+position = Vector2( 575.608, -731.821 )
+rotation = 3.14159
+scale = Vector2( 26, 18.6032 )
+collision_layer = 47
+collision_mask = 47
+
+[node name="Floor3" parent="Basis2" instance=ExtResource( 1 )]
+modulate = Color( 0, 1, 0.976471, 1 )
+position = Vector2( -47797.6, -291.727 )
+rotation = 1.5708
+scale = Vector2( 6.6, 30.0832 )
+collision_layer = 47
+collision_mask = 47
+
+[node name="Floor4" parent="Basis2" instance=ExtResource( 1 )]
+modulate = Color( 0, 1, 0.976471, 1 )
+position = Vector2( 48517.3, -1338.75 )
+rotation = -1.5708
+scale = Vector2( 6.6, 36.2832 )
+collision_layer = 47
+collision_mask = 47
+
+[node name="Character" parent="Basis2" instance=ExtResource( 2 )]
+position = Vector2( 670.816, 437.567 )
+
+[node name="Mouse_Position" parent="Basis2" instance=ExtResource( 4 )]
+position = Vector2( -528.969, 133.137 )
+
+[node name="CanvasLayer" parent="Basis2" instance=ExtResource( 5 )]
+
+[node name="Timer" type="Timer" parent="Basis2"]
+wait_time = 0.5
+one_shot = true
+
+[node name="Reset" parent="Basis2" instance=ExtResource( 7 )]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="Basis2"]
+environment = ExtResource( 8 )
+
+[node name="hero_position" type="Node2D" parent="Basis2"]
+position = Vector2( -46412.3, 290.253 )
+
+[node name="Coin" type="Node2D" parent="Basis2"]
+script = ExtResource( 9 )

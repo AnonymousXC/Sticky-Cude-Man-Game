@@ -1,0 +1,205 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Asset/Weapons/PNG/Alternative color/assaultrifle.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/Control.gd" type="Script" id=2]
+[ext_resource path="res://Asset/Weapons/PNG/Alternative color/revolver2.png" type="Texture" id=3]
+[ext_resource path="res://Asset/Style_Box/Style_Box.tres" type="StyleBox" id=4]
+[ext_resource path="res://Asset/Weapons/PNG/Alternative color/grenade.png" type="Texture" id=5]
+[ext_resource path="res://Asset/Shapes/bronze_coin.png" type="Texture" id=6]
+[ext_resource path="res://Asset/Text/Pacifico/Pacifico-Regular.ttf" type="DynamicFontData" id=7]
+
+[sub_resource type="InputEventAction" id=1]
+action = "1_Gun_Change"
+pressed = true
+
+[sub_resource type="ShortCut" id=2]
+shortcut = SubResource( 1 )
+
+[sub_resource type="InputEventAction" id=3]
+action = "2_Gun_Change"
+
+[sub_resource type="ShortCut" id=4]
+shortcut = SubResource( 3 )
+
+[sub_resource type="InputEventAction" id=5]
+action = "3_Gun_Change"
+pressed = true
+
+[sub_resource type="ShortCut" id=6]
+shortcut = SubResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=7]
+bg_color = Color( 1, 0, 0, 1 )
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 1, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=8]
+bg_color = Color( 0, 0, 0, 1 )
+border_width_left = 15
+border_width_top = 15
+border_width_right = 15
+border_width_bottom = 15
+border_color = Color( 0, 0, 0, 1 )
+border_blend = true
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="DynamicFont" id=10]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=11]
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 7 )
+
+[node name="CanvasLayer" type="CanvasLayer"]
+pause_mode = 2
+
+[node name="Control" type="Control" parent="."]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Gun" type="Button" parent="Control"]
+margin_left = 551.0
+margin_top = 519.0
+margin_right = 769.0
+margin_bottom = 623.0
+rect_scale = Vector2( 0.595319, 0.656983 )
+focus_mode = 0
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+enabled_focus_mode = 0
+shortcut = SubResource( 2 )
+icon = ExtResource( 1 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grappling" type="Button" parent="Control"]
+margin_left = 439.663
+margin_top = 517.428
+margin_right = 551.663
+margin_bottom = 589.428
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+shortcut = SubResource( 4 )
+icon = ExtResource( 3 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Granade" type="Button" parent="Control"]
+margin_left = 368.946
+margin_top = 517.637
+margin_right = 440.946
+margin_bottom = 589.637
+custom_styles/hover = ExtResource( 4 )
+custom_styles/pressed = ExtResource( 4 )
+custom_styles/normal = ExtResource( 4 )
+shortcut = SubResource( 6 )
+icon = ExtResource( 5 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+margin_right = 1024.0
+margin_bottom = 34.0
+custom_styles/fg = SubResource( 7 )
+custom_styles/bg = SubResource( 8 )
+value = 50.0
+percent_visible = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="Control"]
+margin_left = 421.309
+margin_top = 227.127
+margin_right = 461.309
+margin_bottom = 247.127
+custom_styles/panel = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control/Panel"]
+margin_left = -388.0
+margin_top = -151.0
+margin_right = -186.0
+margin_bottom = -98.0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+margin_left = -381.0
+margin_top = -147.0
+margin_right = -240.0
+margin_bottom = -118.0
+rect_scale = Vector2( 1.42278, 1.75379 )
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Kills :"
+autowrap = true
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sprite" type="Sprite" parent="Control"]
+position = Vector2( 956.939, 89.135 )
+scale = Vector2( 0.73722, 0.677096 )
+texture = ExtResource( 6 )
+
+[node name="ColorRect" type="ColorRect" parent="Control/Sprite"]
+margin_left = -179.0
+margin_top = -16.0
+margin_right = -101.0
+margin_bottom = 31.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Control/Sprite"]
+margin_left = -159.638
+margin_top = -26.3945
+margin_right = -101.638
+margin_bottom = 2.60551
+rect_scale = Vector2( 1.92237, 2.06336 )
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Control/Gun" to="Control" method="_on_CheckBox_pressed"]
+[connection signal="pressed" from="Control/Gun" to="Control" method="_on_Gun_pressed"]
+[connection signal="pressed" from="Control/Grappling" to="Control" method="_on_CheckBox2_pressed"]
+[connection signal="pressed" from="Control/Grappling" to="Control" method="_on_Grappling_pressed"]
+[connection signal="pressed" from="Control/Granade" to="Control" method="_on_Granade_pressed"]
